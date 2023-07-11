@@ -577,6 +577,7 @@ dependencies = [
  "actix-web",
  "clap",
  "env_logger",
+ "rand",
  "serde",
  "tpe",
 ]

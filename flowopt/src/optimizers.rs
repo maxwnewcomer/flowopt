@@ -1,1 +1,1 @@
-mod tpe;
+pub mod tpe;

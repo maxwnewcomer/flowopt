@@ -1,12 +1,19 @@
 use serde::{Deserialize, Serialize};
-use tpe::{density_estimation::ParzenEstimator, parzen_estimator, range, TpeOptimizer};
+use tpe::{parzen_estimator, range, TpeOptimizer};
 
 #[derive(Serialize, Deserialize)]
-pub struct NWTParmas {
+pub struct NWTParams {
     pub id: i32,
     pub title: String,
     pub body: String,
     pub published: bool,
+}
+
+#[derive(Serialize, Deserialize)]
+pub struct NWTParmasFromWorker {
+    pub nwt_params: NWTParams,
+    pub mb: f32,
+    pub time: f64,
 }
 
 pub struct NWTOptions {
