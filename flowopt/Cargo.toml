@@ -1,8 +1,15 @@
 [package]
 name = "flowopt"
+authors = [
+    "Max Newcomer <maxwnewcomer@gmail.com>"
+]
 version = "0.1.0"
 edition = "2021"
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+default-run = "flowopt"
 
 [dependencies]
+serde = {version = "1.0.152", features = ["derive"]}
+actix-web = {version = "4.2.1"}
+clap = { version = "4.1.1", features = ["derive"] }
+env_logger = { version = "0.10.0"}
+tpe = {version = "0.2.0"}
