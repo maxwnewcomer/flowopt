@@ -13,28 +13,6 @@ services:
       timeout: 5s
       retries: 5
 
-  # hydra:
-  #   image: oryd/hydra:latest
-  #   depends_on:
-  #     - postgres
-  #   environment:
-  #     DSN: postgres://ory:secret@postgres:5432/ory?sslmode=disable
-  #     URLS_SELF_ISSUER: http://localhost:4444/
-  #     URLS_CONSENT: http://localhost:3000/consent
-  #     URLS_LOGIN: http://localhost:3000/login
-  #     SECRETS_SYSTEM: youReallyNeedToChangeThis
-  #   ports:
-  #     - "4444:4444"
-  #     - "4445:4445"
-  #   command:
-  #     - serve
-  #     - all
-  #     - -c /etc/hydra/config.yml
-  #     - --dev
-  #     - --sqa-opt-out
-  #   volumes:
-  #     - ./ory/hyrda/config.yml:/etc/hydra/config.yml:ro
-
   kratos:
     image: oryd/kratos:latest
     depends_on:
@@ -52,25 +30,7 @@ services:
       - --config
       - /etc/kratos/kratos.yml
     volumes:
-      - ./kratos/config/kratos.yml:/etc/kratos/kratos.yml:ro
-
-  # keto:
-  #   image: oryd/keto:latest
-  #   depends_on:
-  #     - postgres
-  #   environment:
-  #     DSN: postgres://ory:secret@postgres:5432/ory?sslmode=disable
-  #     KETO_READ_REMOTE: http://localhost:4466
-  #     KETO_WRITE_REMOTE: http://localhost:4467
-  #   ports:
-  #     - "4466:4466"
-  #     - "4467:4467"
-  #   command:
-  #     - serve
-  #     - --config
-  #     - /etc/keto/keto.yml
-  #   volumes:
-  #     - ./keto/config/keto.yml:/etc/keto/keto.yml:ro
+      - ./ory/config/kratos.yml:/etc/kratos/kratos.yml:ro
 
 volumes:
   pgdata:

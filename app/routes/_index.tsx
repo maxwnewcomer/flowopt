@@ -40,7 +40,7 @@ export default function Index() {
             </span>
           </Button>
         </div>
-        <div className="flex gap-2">
+        <div className="flex flex-col md:flex-row md:gap-2">
           <div className="p-8 flex-grow mt-auto">
             <h3 className="text-center text-lg font-semibold mb-8">
               Traditional Optimization
@@ -58,7 +58,7 @@ export default function Index() {
             <h3 className="font-workbench font-semibold text-center text-lg mb-8">
               flowopt
             </h3>
-            <div className="relative border border-primary-6 rounded-sm p-16 font-mono text-sm flex flex-col bg-primary-2 text-primary-12">
+            <div className="relative border border-primary-6 rounded-sm p-16 font-mono text-sm flex flex-col bg-gradient-to-br from-primary-1 to-primary-2 text-primary-12">
               <span className="absolute font-xs top-0 p-4 left-0 text-primary-11">
                 flowopt-experiment-1280.lst
               </span>
