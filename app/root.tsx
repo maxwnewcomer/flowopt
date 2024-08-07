@@ -1,3 +1,6 @@
+import "@fontsource-variable/inter/wght.css";
+import "@fontsource-variable/jetbrains-mono/wght.css";
+import "@fontsource-variable/workbench/full.css";
 import {
   Links,
   Meta,
@@ -6,10 +9,6 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 import "./tailwind.css";
-import "@fontsource-variable/inter/wght.css";
-import "@fontsource-variable/jetbrains-mono/wght.css";
-import "@fontsource-variable/workbench/full.css";
-// import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -20,14 +19,11 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links />
       </head>
-      {/* <RSPCProvider> */}
       <body className="bg-base-1 text-base-12 font-sans">
-        {/* <ReactQueryDevtools /> */}
         {children}
         <ScrollRestoration />
         <Scripts />
       </body>
-      {/* </RSPCProvider> */}
     </html>
   );
 }

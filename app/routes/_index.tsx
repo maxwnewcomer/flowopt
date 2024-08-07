@@ -15,11 +15,15 @@ export default function Index() {
   return (
     <div className="font-sans">
       <div className="h-full flex flex-col max-h-screen min-h-screen">
-        <nav className="border-b w-full border-base-6 flex justify-center items-center p-2 gap-2">
+        <nav className="sticky border-b w-full border-base-6 flex justify-between items-center p-2 gap-2">
+          <div />
           {/* <span className="font-workbench font-semibold text-xl">flowopt</span> */}
           <NavMenu />
+          <div className="flex justify-between gap-2">
+            <Button variant={"outline"}>Login</Button>
+          </div>
         </nav>
-        <div className="flex-grow p-8 border-b border-base-6 flex flex-col items-start justify-center">
+        <div className="flex-grow p-8 border-b border-base-6 flex flex-col items-start justify-center bg-gradient-to-br from-base-1 from-50% to-primary-3">
           <h1 className="text-5xl font-semibold font-workbench text-base-12 mb-1 flex justify-start gap-2 items-baseline">
             flowopt
             <div className="font-mono text-base-11 text-sm font-light">
